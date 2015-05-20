@@ -1,0 +1,16 @@
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+#main-pic{
+	margin-top : 20px;
+}
+
+div.semester{
+	padding-top: 10px;
+}
+
+.disappear{
+	display : none;
+}

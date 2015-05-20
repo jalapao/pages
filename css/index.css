@@ -14,3 +14,159 @@ div.semester{
 .disappear{
 	display : none;
 }
+
+.timeline {
+  position: relative;
+  padding: 2em 0;
+}
+
+.timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10px;
+  height: 100%;
+  width: 4px;
+  background: #D7E4ED;
+  /*background : #F0F8FF;*/
+}
+
+@media only screen and (min-width: 1170px) {
+  .timeline {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+.timeline-block{
+	position : relative;
+	margin : 2em 0;
+}
+
+.timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.timeline-img {
+  position : absolute;
+  top : 0;
+  left : 0;
+  width : 40px;
+  height : 40px;
+  border-radius : 50%;
+  box-shadow : 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-img img {
+  display : block;
+  width : 24px;
+  height : 24px;
+  position : relative;
+  left : 50%;
+  top : 50%;
+  margin-left : -12px;
+  margin-top : -12px;
+}
+
+.work-img {
+  background : #75ce66;
+}
+
+.school-img{
+  background : #f0ca45;
+}
+
+@media only screen and (min-width: 1170px) {
+  .timeline-img {
+    width : 40px;
+    height : 40px;
+    left : 50%;
+    margin-left: -20px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform : translateZ(0);
+    -webkit-backface-visibility : hidden;
+  }
+}
+
+.timeline-content {
+  position : relative;
+  margin-left : 20px;
+  background : #F0F8FF;
+  border-radius : 0.25em;
+  padding : 1em;
+  box-shadow : 0 3px 0 #d7e4ed;
+}
+
+.timeline-content:after {
+  content : "";
+  display : table;
+  clear : both;
+}
+
+/*.timeline-content p{
+  font-size : 13px;
+  margin: 1em 0;
+  line-height: 1.6;
+}*/
+
+.timeline-content p{
+	margin-bottom: 0px;
+}
+
+.timeline-date{
+	font-size : 13px;
+}
+
+/*@media only screen and (min-width: 768px) {
+  .timeline-content p{
+  	font-size : 16px;
+  }
+}*/
+
+@media only screen and (min-width: 1170px) {
+  .timeline-content{
+  	width : 45%;
+  	margin-left : 0px;
+  }
+
+  .timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: white;
+  }
+
+  .timeline-date {
+    position: absolute;
+    width: 100%;
+    left: 122%;
+    top: 6px;
+    font-size: 16px;
+  }
+
+  .timeline-block:nth-child(even) .timeline-content {
+    float: right;
+  }
+  .timeline-block:nth-child(even) .timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: white;
+  }
+  .timeline-block:nth-child(even) .timeline-content {
+    float: right;
+  }
+  .timeline-block:nth-child(even) .timeline-content .timeline-date {
+    left: auto;
+    right: 122%;
+    text-align: right;
+  }
+}

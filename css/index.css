@@ -5,6 +5,13 @@
 
 #main-pic{
 	margin-top : 20px;
+	display : none;
+}
+
+@media only screen and (min-width: 1170px) {
+	#main-pic{
+		display : inline;
+	}
 }
 
 div.semester{
@@ -25,7 +32,7 @@ div.semester{
   content: '';
   position: absolute;
   top: 0;
-  left: 10px;
+  left: 20px;
   height: 100%;
   width: 4px;
   background: #D7E4ED;
@@ -33,10 +40,11 @@ div.semester{
 }
 
 @media only screen and (min-width: 1170px) {
-  .timeline {
+/*  .timeline {
     margin-top: 2em;
     margin-bottom: 2em;
-  }
+  }*/
+  
   .timeline::before {
     left: 50%;
     margin-left: -2px;
@@ -97,7 +105,7 @@ div.semester{
 
 .timeline-content {
   position : relative;
-  margin-left : 20px;
+  margin-left : 40px;
   background : #F0F8FF;
   border-radius : 0.25em;
   padding : 1em;
@@ -169,4 +177,8 @@ div.semester{
     right: 122%;
     text-align: right;
   }
+}
+
+.resume-link{
+	margin-top : 4px; 
 }
